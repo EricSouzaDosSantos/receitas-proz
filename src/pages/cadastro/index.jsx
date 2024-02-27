@@ -22,7 +22,7 @@ function App() {
         try {
             await createUserWithEmailAndPassword(email, senha);
             alert('Usuário cadastrado com sucesso!');
-            navigate('../Efetuado/index.jsx');
+            navigate('/Efetuado'); 
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
                 alert('E-mail já está em uso.');
@@ -38,7 +38,7 @@ function App() {
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log("Usuário logado:", user);
-                navigate('/Efetuado'); // Use o caminho relativo da rota
+                navigate('/Efetuado');
             }).catch((error) => {
                 if (error.message == "Cannot read properties of undefined (reading 'user')") {
                     alert('email ou senha incorreto')
