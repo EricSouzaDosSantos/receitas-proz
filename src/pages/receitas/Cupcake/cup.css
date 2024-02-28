@@ -1,37 +1,30 @@
-body {
-    background-color:  rgb(199, 173, 186);
-   margin: 100px;
-   margin-top: 5px;
-   padding: 10px;
-   font-size: 20px;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+/* CSS ajustado com todas as classes */
 #logo {
     display: flex-item;
     margin-right: 10px;
     height: 100px;
 }
 
-h1, h2, h3 {
+.h1, .h2, .h3 {
     text-align: center;
     color: rgb(100, 18, 60);
 }
 
-h2 {
+.h2 {
     font-size: 35px;
 }
 
-h3 {
+.h3 {
     font-size: 30px;
 }
 
-hr {
+.hr {
     border: 1px solid rgb(100, 18, 60);
     width: 90%;
     margin: 20px auto;
 }
 
-table, td {
+.table, .td {
     border: 1px solid rgb(100, 18, 60);
     border-collapse: collapse;
     padding: 8px;
@@ -39,22 +32,21 @@ table, td {
     height: auto;    
 }
 
-th {
+.th {
     background-color: rgb(255, 126, 148);
     color: white;
 }
 
 #imagem {
     width: 400px; 
-    max-width: 100%; 
+    /* max-width: 100%;  */
     height: auto;
     border: 5px solid rgb(209, 156, 183);
     border-radius: 18px;
     box-shadow: 5px 5px 5px rgb(160, 120, 140);
 }
 
-
-.ingredientes{
+.ingredientes {
     display: grid;
     justify-content: center;
     width: 90%; 
@@ -66,6 +58,7 @@ th {
     align-items: center;
     justify-content: center;
     margin: 50px auto;
+    width: 1000px;
     max-width: 1000px;
 }
 
@@ -74,7 +67,7 @@ th {
     margin-bottom: 20px;
 }
 
-.preparo{
+.preparo {
     width: 90%;
     max-width: 800px;
     margin: auto;
@@ -86,7 +79,7 @@ th {
 .imagem {
     flex: 1;
     text-align: center;
-    width: 300px;
+    width: 100%;
 }
 
 #massa {
@@ -99,7 +92,7 @@ th {
     margin: 15px;
 }
 
-ol, li {
+.ol, .li {
     list-style: decimal-leading-zero;
     text-align: justify;
     margin: 0 0 20px 0;
@@ -107,12 +100,76 @@ ol, li {
     line-height: 30px;
 }
 
-body {
+.body {
     font-family: Arial, sans-serif; 
     margin: 0; 
     padding: 0; 
 }
 
-html, #root {
+.html, #root {
     height: 100%; 
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    .h2 {
+        font-size: 30px;
+    }
+
+    .h3 {
+        font-size: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .cabecalho {
+        margin-bottom: 10px;
+    }
+
+    .preparo {
+        width: 90%;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        font-size: 20px;
+        text-align: justify;
+        overflow-wrap: break-word; 
+        max-width: 100%; 
+    }  
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+
+    .h2 {
+        font-size: 25px;
+    }
+
+    .h3 {
+        font-size: 20px;
+    }
+
+    .preparo {
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        font-size: 20px;
+        text-align: justify;
+        overflow-wrap: break-word; 
+        max-width: 100%;
+    }
 }

@@ -53,6 +53,8 @@ function App() {
     }
 
     return (
+        <body className="body">
+            
         <div className={`container ${containerActive ? 'active' : ''}`}>
             <div className="form-container sign-up">
                 <form>
@@ -88,6 +90,8 @@ function App() {
                 </div>
             </div>
         </div>
+        </body>
+
     );
 }
 

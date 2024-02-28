@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../pages/cadastro";
 import Nave from "../pages/Efetuado";
-import Cup from "../pages/Efetuado/receitas/Cupcake";
+import Cup from "../pages/receitas/Cupcake/Cupcake";
+import Ham from "../pages/receitas/Hamburguer/Hamburguer";
 
 
 export function AppRoutes() {
@@ -10,7 +11,9 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/Efetuado" element={<Nave />} />
-        <Route path="/Efetuado/receitas" element={<Cup />} />
+        <Route path="/receitas/Cupcake" element={<Cup />} />
+        <Route path="/receitas/Hamburguer" element={<Ham />} />
+
       </Routes>
     </BrowserRouter>
   );
