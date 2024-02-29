@@ -25,9 +25,9 @@ export function Nave() {
                 </header>
                 <div className={styles.div}>
                     <div className={styles.container}>
-                        <Receita to={'../receitas/Cupcake'} imageSrc={CupcakeImage} alt="Cupcake" title="CupCake" />
-                        <Receita to={'../receitas/Hamburguer'} imageSrc={BurgerImage} alt="Hambúrguer" title="Hambúrguer" />
-                        <Receita to={'receitas/'} imageSrc={EasterEggImage} alt="Ovo de Páscoa" title="Ovo de Páscoa" />
+                        <Receita className={styles.Links} to={'../receitas/Cupcake'} imageSrc={CupcakeImage} alt="Cupcake" title="CupCake" />
+                        <Receita className={styles.Links} to={'../receitas/Hamburguer'} imageSrc={BurgerImage} alt="Hambúrguer" title="Hambúrguer" />
+                        <Receita className={styles.Links} to={'../receitas/Pascoa'} imageSrc={EasterEggImage} alt="Ovo de Páscoa" title="Ovo de Páscoa" />
                     </div>
                 </div>
             </body>
