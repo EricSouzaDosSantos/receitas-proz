@@ -72,19 +72,28 @@ function Pascoa() {
             <div className={styles.preparation}>
                 <ol className={styles.instructions}>
                     <li>Quebre o chocolate ao leite em pedaços pequenos e derreta em banho-maria ou no microondas, mexendo a cada 30 segundos para não queimar.</li>
+                    <br></br>
+
                     <li>Pincele a forma de ovo de páscoa com o chocolate derretido, cobrindo toda a superficie. Leve á geladeira por cerca de 5 minutos para firmar. Repita o processo mais duas vezes formando uma camada grossa de chocolate. Reserve um pouco de chocolate derretido para fechar o ovo depois.</li>
-                    <li>Temperar as carnes com sal e pimenta do reino a gosto.</li>
-                    <li>Fazer bolinhas com a carne e pesar, cerca de 200g cada.</li>
-                    <li>Embalar as bolinhas de carne e colocar na geladeira.</li>
-                    <li>Tirar o bacon do forno, remover o excesso de óleo e voltar ao forno.</li>
-                    <li>Passar a maionese nos pães.</li>
-                    <li>Picar o picles e colocar no pão junto com a maionese.</li>
-                    <li>Tirar o bacon do forno e deixar descansar em uma travessa com papel toalha.</li>
-                    <li>Fritar os hambúrgueres em fogo alto em uma frigideira bem quente, sem usar óleo.</li>
-                    <li>Virar os hambúrgueres para dourar ambos os lados.</li>
-                    <li>Colocar os queijos sobre as carnes e levar ao forno a 200ºC até derreter.</li>
-                    <li>Tirar os hambúrgueres do forno, adicionar o bacon e levar ao forno novamente.</li>
-                    <li>Montar o lanche e está pronto para servir!</li>
+                    <br></br>
+
+                    <li>Enquanto isso, prepare o recheio de brigadeiro: em uma panela, coloque o leite condensado, a manteiga e o cacau em pó. Leve ao fogo baixo, mexendo sempre, até começar a desgrudar do fundo da panela e formar um brigadeiro cremoso. Desligue o fogo, adicione o creme de leite e misture bem. Deixe esfriar.</li>
+                    <br></br>
+
+                    <li>Lave e seque os morangos. Corte-os em fatias finas.</li>
+                    <br></br>
+
+                    <li>Retire a forma da geladeira e espalhe o recheio de brigadeiro no interior do ovo, deixando um espaço na borda. Disponha as fatias de morango sobre o brigadeiro.</li>
+                    <br></br>
+
+                    <li>Derreta o chocolate meio amargo da mesma forma que fez com o chocolate ao leite. Pincele as bordas do ovo com o chocolate meio amargo derretido e cubra o recheio com uma camada fina de chocolate. Volte à geladeira por mais alguns minutos para firmar.</li>
+                    <br></br>
+
+                    <li>Retire da geladeira e desenforme cuidadosamente. Se desejar, decore com granulado de chocolate.</li>
+                    <br></br>
+
+                    <li>Embrulhe o ovo em papel alumínio e armazene na geladeira até a hora de servir.</li>
+                    
                 </ol>
             </div>
         </div>

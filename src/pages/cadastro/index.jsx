@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../services/firebaseConfig';
-import { useNavigate } from 'react-router-dom';
-
+import { useActionData, useNavigate } from 'react-router-dom';
 
 
 function App() {
@@ -19,17 +18,18 @@ function App() {
 
     const handleCadastro = async (e) => {
         e.preventDefault();
-        try {
-            await createUserWithEmailAndPassword(email, senha);
+        createUserWithEmailAndPassword(email, senha)
+        .then((userCredential) =>{
+            const user = userCredential.user;
             alert('Usuário cadastrado com sucesso!');
             navigate('/Efetuado'); 
-        } catch (error) {
+        }).catch ((error) => {
             if (error.code === 'auth/email-already-in-use') {
                 alert('E-mail já está em uso.');
             } else {
                 alert('Erro ao criar usuário: ' + error.message);
             }
-        }
+        });
     }
 
     const handleLogin = async (e) => {
@@ -60,8 +60,8 @@ function App() {
                 <form>
                     <h1>Criar Conta</h1>
                     <span>ou use seu email para se cadastrar</span>
-                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required="digite algo nesse campo"/>
+                    <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required="Digite algo nesse campo"/>
                     <button onClick={handleCadastro}>Cadastrar</button>
                 </form>
             </div>
