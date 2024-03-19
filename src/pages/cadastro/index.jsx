@@ -16,7 +16,7 @@ function App() {
 
 
 
-    const handleCadastro = async (e) => {
+    const Cadastro = async (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(email, senha)
         .then((userCredential) =>{
@@ -26,13 +26,15 @@ function App() {
         }).catch ((error) => {
             if (error.code === 'auth/email-already-in-use') {
                 alert('E-mail já está em uso.');
+            }else if(error.code == "Cannot read properties of undefined (reading 'user')"){
+                alert('o email digitado já está em uso');
             } else {
                 alert('Erro ao criar usuário: ' + error.message);
             }
         });
     }
 
-    const handleLogin = async (e) => {
+    const Login = async (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(email, senha)
             .then((userCredential) => {
@@ -60,9 +62,9 @@ function App() {
                 <form>
                     <h1>Criar Conta</h1>
                     <span>ou use seu email para se cadastrar</span>
-                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required="digite algo nesse campo"/>
-                    <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required="Digite algo nesse campo"/>
-                    <button onClick={handleCadastro}>Cadastrar</button>
+                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)}  required/>
+                    <button onClick={Cadastro}>Cadastrar</button>
                 </form>
             </div>
             <div className="form-container sign-in">
@@ -72,7 +74,7 @@ function App() {
                     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
                     <a href="#">Esqueceu sua senha?</a>
-                    <button onClick={handleLogin}>Entrar</button>
+                    <button onClick={Login}>Entrar</button>
                 </form>
             </div>
             <div className="toggle-container">

@@ -5,6 +5,7 @@ import '../../../assets/'
  function Brow() {
     return (
         <div className={styles.container}>
+        
             <h1 className={styles.title}>Ovo de Pascoa</h1>
 
             <div className={styles.content}>
